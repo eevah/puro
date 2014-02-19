@@ -1,10 +1,10 @@
+// puro - Audio sampler library
 //
-//  resource.h
-//  puro
+// Copyright (c) 2013 Olli Erik Keskinen
+// All rights reserved.
 //
-//  Created by Olli Erik Keskinen on 20/01/14.
-//  Copyright (c) 2014 Olli Erik Keskinen. All rights reserved.
-//
+// This code is released under The BSD 2-Clause License.
+// See the file LICENSE.txt for information.
 
 #pragma once
 
@@ -21,12 +21,6 @@ public:
     T* getinactive();
     void setinactive(T* free);
 };
-
-/*
- template<typename T> CircBuff<T>::CircBuf<T>(int i) {
- data = new T[i];
- }
- */
 
 template <class T>
 void

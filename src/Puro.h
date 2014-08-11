@@ -38,13 +38,27 @@ class Worker;
 
 
 class Puro {
-	PuroBase* base_;
+	//PuroBase* base_;
 public:
-	Puro();
-	~Puro();
-	Interpreter* GetInterpreter();
-	Engine* GetEngine();
-	const char* HelloWorld();
+	//Puro();
+	//~Puro();
+    
+    virtual void PrepareAudioPassage() = 0;
+    virtual void ReturnAudioPassage() = 0;
+    
+    virtual void PrepareEnvelopePassage() = 0;
+    virtual void ReturnEnvelopePassage() = 0;
+    
+	virtual void SetMaterial(char* idea, char* material_path) = 0;
+	virtual void SetSync(char* idea);
+	virtual void OnsetDropFromIdea(char* idea, char* time=0);
+	virtual void LoadAudioMaterial(char* association, char* path_to_file);
+    
+    
+    
+	//Interpreter* GetInterpreter();
+	//Engine* GetEngine();
+	//const char* HelloWorld();
 };
 
 

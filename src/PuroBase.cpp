@@ -59,7 +59,7 @@ PuroBase::~PuroBase() {
 
 Idea*
 PuroBase::GetIdea(Tag association) {
-	//std::cout << "Get idea " << association << std::endl;
+	//std::cout << "Get idea " << association << st`d::endl;
 	Idea* idea = ideas_in_use_[association];
 	if (idea == 0) {
 		//std::cout << "   Use NEW idea " << std::endl;
